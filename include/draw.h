@@ -44,7 +44,7 @@ void HelicopterLight(glm::vec3 color, glm::vec3 dir, float cutoff, float intensi
     r = std::max(r, 0.0f);
     g = std::max(g, 0.0f);
     b = std::max(b, 0.0f);
-    GLfloat lightPosition[] = { 0, -1.0, 0.0, 1.0 };  // Light position (x, y, z, w)
+    GLfloat lightPosition[] = { 0, -1.0, 10.0, 1.0 };  // Light position (x, y, z, w)
     GLfloat lightAmbient[] = { 0.2 * intensity * r, 0.2 * intensity * g, 0.2 * intensity * b, 1.0 };     // Ambient light color (RGBA)
     GLfloat lightDiffuse[] = { r, g, b, 1.0 };     // Diffuse light color (RGBA)
     GLfloat lightSpecular[] = { r, g, b, 1.0 };    // Specular light color (RGBA)

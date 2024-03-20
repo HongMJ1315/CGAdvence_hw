@@ -48,9 +48,9 @@ void main()  {
     vec3 distance = normalize(pointLightDirection - FP);
     float attenuation = 1.0 / (gl_LightSource[1].constantAttenuation + gl_LightSource[1].linearAttenuation * length(distance) + gl_LightSource[1].quadraticAttenuation * length(distance) * length(distance));
 
-    // diffuse += pointLightDiffuse * gl_LightSource[1].diffuse * texel * attenuation;
+    diffuse += pointLightDiffuse * gl_LightSource[1].diffuse * texel * attenuation;
     specular += pointLightSpecular * gl_LightSource[1].specular * matSpecular * attenuation;
-    // ambient += gl_LightSource[1].ambient * texel * attenuation;
+    ambient += gl_LightSource[1].ambient * texel * attenuation;
     //*/
 
     gl_FragColor = ambient + diffuse + specular ; 
